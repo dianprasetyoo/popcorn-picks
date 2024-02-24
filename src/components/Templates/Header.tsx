@@ -2,18 +2,39 @@ import React from "react";
 import pockicksLogo from "../../assets/logo/pockicks.png";
 import { FaShoppingCart, FaSearch } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import ModalAddToCart from "../ModalAddToCart";
 
 function Header() {
   const itemCount = 1;
   const location = useLocation();
+  const [scrolled, setScrolled] = React.useState(false);
+  const [openModalCart, setOpenModalCart] = React.useState(false)
 
-  console.log("disini:", location.pathname);
+  // Function to handle scroll event
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header
-      className={`bg-regular text-white py-4 ${
-        location.pathname !== "/detail" ? "bg-opacity-1" : "bg-opacity-20 relative"
-      }`}
+      className={`fixed top-0 w-full bg-regular text-white py-4 z-50 transition-colors duration-300  ${
+        location.pathname !== "/detail"
+          ? "bg-opacity-1"
+          : scrolled
+          ? "bg-opacity-1"
+          : "bg-opacity-20"
+      } ${scrolled ? "bg-secondary" : "bg-regular"}`}
     >
       <div className="mx-auto lg:px-8 flex items-center justify-between">
         {/* Logo */}
@@ -30,7 +51,7 @@ function Header() {
             <input
               type="text"
               placeholder="Find Movie"
-              className="py-2 px-4 pr-10 block w-full rounded-lg bg-secondary border-transparent focus:border-gray-500 focus:outline-none bg-opacity-20"
+              className="py-2 px-4 pr-10 block w-full rounded-lg bg-grey border-transparent focus:border-gray-500 focus:outline-none bg-opacity-20"
             />
             <div className="absolute inset-y-0 right-0 px-4 py-2 rounded-r-lg flex items-center">
               <FaSearch size={16} />
@@ -41,7 +62,7 @@ function Header() {
         {/* cart */}
         <div
           className="flex items-center ml-10 cursor-pointer"
-          onClick={() => alert("open modal cart")}
+          onClick={() => setOpenModalCart(true)}
         >
           <div className="relative">
             <FaShoppingCart size={24} />
@@ -52,6 +73,7 @@ function Header() {
             )}
           </div>
         </div>
+        <ModalAddToCart isOpen={openModalCart} onClose={() => {setOpenModalCart(false)}}/>
       </div>
     </header>
   );

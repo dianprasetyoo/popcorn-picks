@@ -4,13 +4,24 @@ import Card from "../../components/Card";
 
 const HomePage = () => {
   const [sort, setSort] = React.useState("popularity");
+  const [showItem, setShowItem] = React.useState(false);
   const images = [
-    "https://via.placeholder.com/800x400/ff0000",
-    "https://via.placeholder.com/800x400/00ff00",
-    "https://via.placeholder.com/800x400/0000ff",
-    "https://via.placeholder.com/800x400/0000ff",
-    "https://via.placeholder.com/800x400/0000ff",
+    "https://via.placeholder.com/500x400/ff0000",
+    "https://via.placeholder.com/500x400/00ff00",
+    "https://via.placeholder.com/500x400/0000ff",
+    "https://via.placeholder.com/500x400/0000ff",
+    "https://via.placeholder.com/500x400/0000ff",
   ];
+
+  const handleRentButtonClick = () => {
+    // Set state to show the item
+    setShowItem(true);
+
+    // After a delay, hide the item
+    setTimeout(() => {
+      setShowItem(false);
+    }, 1000); // Adjust the delay as needed
+  };
 
   return (
     <div className="min-h-screen bg-regular">
@@ -43,7 +54,7 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <Card images={images} />
+          <Card images={images} onPress={handleRentButtonClick} title={showItem ? "item added" : "RENT"} />
         </div>
       </div>
     </div>

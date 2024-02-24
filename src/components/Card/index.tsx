@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-const Card = ({ images }: { images: string[] }) => {
+const Card = ({ images, onPress, title }: { images: string[], onPress: any, title?: string }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       {images.map((image, index) => (
@@ -31,9 +31,9 @@ const Card = ({ images }: { images: string[] }) => {
           </Link>
           <div
             className="flex justify-center bg-red-100 py-3 text-white cursor-pointer"
-            onClick={() => alert("add to cart")}
+            onClick={onPress}
           >
-            RENT
+            {title ? title : "RENT"}
           </div>
         </div>
       ))}

@@ -58,7 +58,7 @@ const DetailPage = () => {
         </div>
       </div>
       {/* banner movie */}
-      <div className="w-full flex flex-row mt-[-180px] z-50 absolute">
+      <div className="w-full flex flex-row mt-[-180px] absolute">
         <img
           src={state}
           alt="banner"
@@ -153,7 +153,7 @@ const DetailPage = () => {
       {/* Reccomendation */}
       <div className="bg-regular py-12 px-12 mt-8">
         <p className="text-white font-bold text-md mb-8">Reccomendation</p>
-        <Card images={images} />
+        <Card images={images} onPress={()=> alert('add to cart')}/>
       </div>
     </div>
   );
