@@ -15,6 +15,21 @@ Popcorn Pick is a web application designed for renting Star Wars movies. Built u
 ## Demo
 You can see a demo of Popcorn Pick on [Google Drive](https://drive.google.com/drive/folders/1oWKsnN9qsLea3-1wmNQdiHtx_rC2HPe7?usp=sharing).
 
+## Project Structure
+
+```plaintext
+/src
+  /assets
+  /components
+  /configs
+  /middlewares
+  /pages
+  /routes
+  /stores
+  /types
+  /utils
+```
+
 ## Installation
 To run Popcorn Pick locally, follow these steps:
 1. Clone this repository to your computer.
