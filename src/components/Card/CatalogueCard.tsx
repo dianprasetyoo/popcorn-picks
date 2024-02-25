@@ -45,7 +45,7 @@ const CatalogueCard = ({
         >
           <Link to={{ pathname: "/detail" }} state={item} className="block">
             <div className="relative">
-              <div className="text-white absolute bg-black right-0 p-2 rounded-bl-md">
+              <div className="text-white absolute bg-red-100 right-0 p-2 rounded-bl-md">
                 $ {item.price}
               </div>
               <img
