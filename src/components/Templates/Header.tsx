@@ -1,11 +1,11 @@
 import React from "react";
-import pockicksLogo from "../../assets/logo/pockicks.png";
+import starwarsLogo from "../../assets/images/Starwars-logo.png";
 import { FaShoppingCart, FaSearch } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import { useGlobalContext } from "../../functions";
 import ModalAddToCart from "../ModalAddToCart";
 
 function Header() {
-  const itemCount = 1;
   const location = useLocation();
   const [scrolled, setScrolled] = React.useState(false);
   const [openModalCart, setOpenModalCart] = React.useState(false)
@@ -26,6 +26,8 @@ function Header() {
     };
   }, []);
 
+  const { state: globalContextData } = useGlobalContext();
+
   return (
     <header
       className={`fixed top-0 w-full bg-regular text-white py-4 z-50 transition-colors duration-300  ${
@@ -40,8 +42,7 @@ function Header() {
         {/* Logo */}
         <Link to={`/`}>
           <div className="flex items-end mr-10">
-            <img src={pockicksLogo} alt="Pockicks Logo" className="h-10" />
-            <span className="ml-2 text-xl font-bold">POPCORN PICKS</span>
+            <img src={starwarsLogo} alt="Pockicks Logo" className="h-10" />
           </div>
         </Link>
 
@@ -66,9 +67,9 @@ function Header() {
         >
           <div className="relative">
             <FaShoppingCart size={24} />
-            {itemCount > 0 && (
+            {globalContextData.cart.length > 0 && (
               <span className="absolute -top-1 -right-1 bg-red-500 text-white w-5 h-5 flex justify-center items-center rounded-full text-xs">
-                {itemCount}
+                {globalContextData.cart.length}
               </span>
             )}
           </div>

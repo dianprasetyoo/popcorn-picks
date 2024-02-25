@@ -4,6 +4,7 @@ import Header from "../Templates/Header";
 import Footer from "../Templates/Footer";
 import { HomePage } from "../../pages/Home";
 import { DetailPage } from "../../pages/Detail";
+import NotFoundPage from "../NotFoundPage";
 import { PAGES } from "../../configs/constants";
 import { createBrowserHistory } from "history";
 
@@ -14,13 +15,11 @@ const AppNavigator = () => {
     <Router history={history}>
       <div>
         <div>
-          {/* Apps Title & Navigation */}
           <Header />
-
-          {/* Routes Section - Will Render Depend The Page */}
           <Routes>
             <Route path={PAGES.HOME} element={<HomePage />} />
             <Route path={PAGES.DETAIL} element={<DetailPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
           <Footer />
         </div>
