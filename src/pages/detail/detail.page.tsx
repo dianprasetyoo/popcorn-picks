@@ -109,6 +109,7 @@ const DetailPage = () => {
               </p>
             </div>
             <div
+              data-testid="button-rent"
               className="bg-red-100 py-3 w-[10vw] rounded-md flex justify-center text-white text-sm cursor-pointer ml-10"
               onClick={() => {
                 addToCart({
@@ -129,15 +130,15 @@ const DetailPage = () => {
       <div className="my-36 mx-12">
         <div className="my-8">
           <p className="text-red-100 text-md font-bold mb-8">Characters</p>
-          <PhotoCard data={combineCharacters} type={'people'} />
+          <PhotoCard data={combineCharacters} type={"people"} />
         </div>
         <div className="my-8">
           <p className="text-red-100 text-md font-bold mb-8">Planets</p>
-          <PhotoCard data={combinePlanets} type={'planets'} />
+          <PhotoCard data={combinePlanets} type={"planets"} />
         </div>
         <div className="my-8">
           <p className="text-red-100 text-md font-bold mb-8">Starships</p>
-          <PhotoCard data={combineStarships} type={'starships'} />
+          <PhotoCard data={combineStarships} type={"starships"} />
         </div>
       </div>
     </div>

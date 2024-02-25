@@ -27,7 +27,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test src/pages/__tests__ --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -55,10 +55,5 @@
     "babel-jest": "^29.7.0",
     "jest": "^27.5.1",
     "tailwindcss": "^3.4.1"
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.jsx?$": "babel-jest"
-    }
   }
 }
