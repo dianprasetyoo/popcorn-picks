@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# Popcorn Pick: Star Wars Movie Rental
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Starwars-logo](https://github.com/dianprasetyoo/popcorn-picks/assets/55281092/a54228f6-7920-4d4d-8cd2-611da811b0c8)
 
-## Available Scripts
+Popcorn Pick is a web application designed for renting Star Wars movies. Built using [React JS](https://github.com/facebook/create-react-app), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/), Popcorn Pick utilizes data from the [swapi.dev](https://swapi.dev/) API to offer a curated selection of Star Wars films available for rental.
 
-In the project directory, you can run:
+## Features
+- **Browse Catalog:** Explore a diverse catalog of Star Wars movies.
+- **Add to Cart:** Select movies to add them to your cart for rental.
+- **Movie Detail:** View comprehensive details about each movie.
+- **Character Detail:** Discover in-depth information about Star Wars characters.
+- **Planet Detail:** Explore details about planets featured in the Star Wars universe.
+- **Starship Detail:** Learn more about the starships used in the Star Wars saga.
 
-### `npm start`
+## Demo
+You can see a demo of Popcorn Pick on [Google Drive](https://drive.google.com/drive/folders/1oWKsnN9qsLea3-1wmNQdiHtx_rC2HPe7?usp=sharing).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
+To run Popcorn Pick locally, follow these steps:
+1. Clone this repository to your computer.
+   ```bash
+   git clone git@github.com:dianprasetyoo/popcorn-picks.git
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Navigate to the project directory.
+   ```bash
+   cd popcorn-picks
+   
+3. Create a .env file based on the .env.example template.
+   ```bash
+   cp .env.example .env
 
-### `npm test`
+4. Install dependencies.
+   ```bash
+   npm install
+5. Run the application.
+   ```bash
+   npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ensure you have Node.js (version 20.2.0) and npm installed on your system.
 
-### `npm run build`
+## Running Unit Tests
+To run unit tests for Popcorn Pick using Jest, follow these steps:
+1. Ensure you have Node.js (version 20.2.0) and npm installed on your system.
+2. Navigate to the project directory in your terminal.
+3. Install the required dependencies, including Jest, if you haven't already done so:
+   ```bash
+   npm install
+4. Run the following command to execute the unit tests:
+   ```bash
+   npm test
+This command will run all the unit tests in the project and display the results in your terminal.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
+1. Open Popcorn Pick in your web browser.
+2. Browse the catalog of Star Wars movies available for rental.
+3. Click on a movie to view its details.
+4. Add movies to your cart by selecting them.
+5. Explore character, planet, and starship details for a deeper understanding of the Star Wars universe.
