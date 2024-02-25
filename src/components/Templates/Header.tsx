@@ -28,6 +28,13 @@ function Header() {
 
   const { state: globalContextData } = useGlobalContext();
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      const inputValue = (event.target as HTMLInputElement).value;
+      alert(inputValue);
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 w-full bg-regular text-white py-4 z-50 transition-colors duration-300  ${
@@ -53,6 +60,7 @@ function Header() {
               type="text"
               placeholder="Find Movie"
               className="py-2 px-4 pr-10 block w-full rounded-lg bg-grey border-transparent focus:border-gray-500 focus:outline-none bg-opacity-20"
+              onKeyDown={handleKeyDown}
             />
             <div className="absolute inset-y-0 right-0 px-4 py-2 rounded-r-lg flex items-center">
               <FaSearch size={16} />
