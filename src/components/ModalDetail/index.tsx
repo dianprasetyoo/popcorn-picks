@@ -1,5 +1,5 @@
 import React from "react";
-import { useDetailService } from "../../services";
+import { useDetailService } from "../../middlewares";
 import Loading from "../Loading";
 
 interface ModalDetailProps {

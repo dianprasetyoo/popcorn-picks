@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
-import { useGlobalContext } from "../../functions";
+import { useGlobalContext } from "../../utils";
 import { people, planets, vehicles } from "../../configs/constants";
 import { PhotoCard } from "../../components/Card";
 

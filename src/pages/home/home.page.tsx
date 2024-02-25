@@ -1,6 +1,6 @@
 import React from "react";
 import { CatalogueCard } from "../../components/Card";
-import { useMovieService } from "../../services";
+import { useMovieService } from "../../middlewares";
 import { movieImages } from "../../configs/constants";
 
 const HomePage = () => {

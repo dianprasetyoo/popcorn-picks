@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import * as models from "../../types";
-import { useGlobalContext } from "../../functions";
+import { useGlobalContext } from "../../utils";
 
 const LoadingSkeleton = () => {
   return (

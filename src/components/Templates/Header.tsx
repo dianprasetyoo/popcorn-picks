@@ -2,7 +2,7 @@ import React from "react";
 import starwarsLogo from "../../assets/images/Starwars-logo.png";
 import { FaShoppingCart, FaSearch } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
-import { useGlobalContext } from "../../functions";
+import { useGlobalContext } from "../../utils";
 import ModalAddToCart from "../ModalAddToCart";
 
 function Header() {

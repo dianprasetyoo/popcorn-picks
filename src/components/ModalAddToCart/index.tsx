@@ -1,6 +1,6 @@
 import React from "react";
 import { FaTrash } from "react-icons/fa";
-import { useGlobalContext } from "../../functions";
+import { useGlobalContext } from "../../utils";
 import { toast } from "react-toastify";
 import Receipt from "../Receipt";
 
