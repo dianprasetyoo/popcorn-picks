@@ -2,9 +2,23 @@ import React from "react";
 import { FaTrash } from "react-icons/fa";
 import { useGlobalContext } from "../../functions";
 import { toast } from "react-toastify";
+import Receipt from "../Receipt";
 
 const ModalAddToCart = ({ isOpen, onClose }: any) => {
-  const { state: stateCart, removeFromCart, clearCart, checkout } = useGlobalContext();
+  const {
+    state: stateCart,
+    removeFromCart,
+    clearCart,
+    checkout,
+  } = useGlobalContext();
+  const [showReceipt, setShowReceipt] = React.useState(false);
+  const [receiptData, setReceiptData] = React.useState<any>([]);
+
+  if (showReceipt) {
+    return (
+      <Receipt cartItems={receiptData} onClose={() => setShowReceipt(false)} />
+    );
+  }
 
   if (!isOpen) return null;
   return (
@@ -90,12 +104,19 @@ const ModalAddToCart = ({ isOpen, onClose }: any) => {
             Clear
           </div>
           <div
-            onClick={()=> {
+            onClick={() => {
               if (stateCart.cart.length > 0) {
-              checkout();
-              onClose();
+                setReceiptData(stateCart.cart)
+                checkout();
+                onClose();
+                // setTimeout(() => {
+                  setShowReceipt(true);
+                // }, 3000);
+          
               } else {
-                toast.success("Your cart is empty. Please add items before checkout.");
+                toast.success(
+                  "Your cart is empty. Please add items before checkout."
+                );
               }
             }}
             className="cursor-pointer text-sm bg-red-100 p-3 rounded-md m-4"
