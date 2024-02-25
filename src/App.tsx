@@ -1,6 +1,6 @@
-import { CombinedProviders } from "./contexts/CombinedProviders";
+import { CombinedProviders } from "./stores/CombinedProviders";
 import "./assets/tailwind/styles.css";
-import AppNavigator from "./components/AppNavigator";
+import AppNavigator from "./routes";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

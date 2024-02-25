@@ -1,2 +1,2 @@
-import DetailPage from "./Detail";
+import DetailPage from "./detail.page";
 export { DetailPage };

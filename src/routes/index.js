@@ -1,11 +1,11 @@
 import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Header from "../Templates/Header";
-import Footer from "../Templates/Footer";
-import { HomePage } from "../../pages/Home";
-import { DetailPage } from "../../pages/Detail";
-import NotFoundPage from "../NotFoundPage";
-import { PAGES } from "../../configs/constants";
+import Header from "../components/Templates/Header";
+import Footer from "../components/Templates/Footer";
+import { HomePage } from "../pages/home";
+import { DetailPage } from "../pages/detail";
+import NotFoundPage from "../components/NotFoundPage";
+import { PAGES } from "../configs/constants";
 import { createBrowserHistory } from "history";
 
 const history = createBrowserHistory();

@@ -5,7 +5,7 @@ import {
     SetStateAction,
     useState,
   } from "react";
-  import * as models from "../models";
+  import * as models from "../types";
   
   /** => INTERFACES */
   type PropValue = {

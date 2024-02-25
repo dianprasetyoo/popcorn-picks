@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { GlobalContext } from "../contexts/Global.context";
-import * as models from "../models";
+import { GlobalContext } from "../stores/Global.context";
+import * as models from "../types";
 import { toast } from "react-toastify";
 
 export const useGlobalContext = () => {

@@ -1,5 +1,5 @@
 import { UseQueryResult, useQuery } from "react-query";
-import * as models from "../../models";
+import * as models from "../../types";
 import { MovieListService } from "../apis";
 import { toast } from "react-toastify";
 

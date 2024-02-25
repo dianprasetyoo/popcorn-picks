@@ -1,5 +1,5 @@
 import { HttpService } from "../HttpServices";
-import * as models from "../../models";
+import * as models from "../../types";
 
 export class MovieListService extends HttpService {
   static getFilms() {

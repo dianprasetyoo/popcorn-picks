@@ -12,7 +12,7 @@ export abstract class HttpService {
       ...config.headers,
       // manage addition for headers
     };
-    config.baseURL = "https://swapi.dev/api";
+    config.baseURL = process.env.REACT_APP_BASE_URL || "";
 
     return config;
   }

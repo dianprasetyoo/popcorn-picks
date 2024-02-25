@@ -1,6 +1,6 @@
 import React from "react";
 import { providers } from "./index";
-import * as models from "../models";
+import * as models from "../types";
 
 type CombinedProviderType = React.FC<models.ProviderProps>;
 

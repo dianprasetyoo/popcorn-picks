@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import * as models from "../../models";
+import * as models from "../../types";
 import { useGlobalContext } from "../../functions";
 
 const LoadingSkeleton = () => {
@@ -37,7 +37,7 @@ const CatalogueCard = ({
   
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-      {!data && [...Array(8)].map((index) => <LoadingSkeleton key={index} />)}
+      {!data && [...Array(8)].map((_data, index) => <LoadingSkeleton key={index} />)}
       {data?.map((item, index) => (
         <div
           key={index}
